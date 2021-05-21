@@ -1,0 +1,5 @@
+[core]
+    analytics = false
+    remote = remote_storage
+['remote "remote_storage"']
+    url = https://drive.google.com/drive/folders/1SV1jX43wsQuIKfku3bAOmNuG6oi34_OP?usp=sharing
