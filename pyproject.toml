@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dvc_tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Alex Berndt"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dvc = "^2.1.0"
+scikit-learn = "^0.24.2"
+scikit-image = "^0.18.1"
+pandas = "^1.2.4"
+numpy = "^1.20.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
