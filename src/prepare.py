@@ -2,7 +2,10 @@ from pathlib import Path
 
 import pandas as pd
 
-FOLDERS_TO_LABELS = {"n03445777": "golf ball", "n03888257": "parachute"}
+FOLDERS_TO_LABELS = {
+    "n03445777": "golf ball", 
+    "n03888257": "parachute"
+    }
 
 
 def get_files_and_labels(source_path):
@@ -25,12 +28,20 @@ def save_as_csv(filenames, labels, destination):
 
 
 def main(repo_path):
+
+    # define paths for train and test sets
     data_path = repo_path / "data"
     train_path = data_path / "raw/train"
     test_path = data_path / "raw/val"
+    
+    # create train and test data locations
     train_files, train_labels = get_files_and_labels(train_path)
     test_files, test_labels = get_files_and_labels(test_path)
+    
+    # define path of prepared CSV file locations
     prepared = data_path / "prepared"
+    
+    # save CSV files
     save_as_csv(train_files, train_labels, prepared / "train.csv")
     save_as_csv(test_files, test_labels, prepared / "test.csv")
 
